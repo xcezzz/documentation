@@ -25,6 +25,11 @@ Development
 Themes should be developed in the `GitHub themes repository`_.
 You can find a simple example `here`_.
 
+How to change some css
+----------------------
+
+You can find the styles.css in core/
+
 How to change images and the logo
 ---------------------------------
 
