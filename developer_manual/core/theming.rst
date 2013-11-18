@@ -1,73 +1,115 @@
-Theming
-=======
+1. Theming owncloud
+===================
 
-Themes can be used to customise the look and feel of ownCloud without the need
-to patch the source code.
+Themes can be used to customize the look and feel of ownCloud.
+Themes can relate to the following topics of owncloud:
 
-Activate
---------
+* Theming the web-frontend
+* Theming the owncloud Desktop client
+This documentation contains only the Web-frontend adaptions so far.
 
-Themes can be placed in the theme folder ``/themes`` with the name of the theme
-as foldername. The theme can be activated by putting ``"theme" => ‘themename’``,
-into the ``config.php`` file.
+1.1 Preparations
+----------------
+Basically its a good idea to have a developement/test server (e.g. a virualized) independent form your productive system, to
 
-Structure
----------
+* keep adaptions and debugging away from normal services
+* influence no other processes
+* influence not other server settings
+
+1.2 Preconditions
+-----------------
+For successfull theming a webapplication such as ownCloud, one needs to have basic knowledge in the following topics:
+
+* Website structure with HTML
+* Programming dynamic websites
+* Designing a website with CSS
+* Creating or adapting graphics or photos
+Because ownCloud is written in PHP there are no static HTML-files found but only CSS files that match the HTML output that comes from PHP.
+
+1.3 Getting started
+-------------------
+A good idea getting starting with a dynamically created website is to inspect it with **webdeveloper tools**, that are found in almost any browser. They show the generated HTML and the CSS Code, that the client/browser is recieving:
+With this facts you can easyly determine, where the following object-related attributes for the phenomenons are settled:
+
+* place
+* colour
+* links
+* graphics
+
+In owncloud standard theme everything is held very simple. This allows you quick adpating. In an unchanged ownCloud version css files and the standard pictures reside in /owncloud/themes/default folder.
+The next thing you should do, before starting any changes is:
+Make a backup of your current theme(s) e.g.:
+
+* Goto …/owncloud/themes
+* cp -r default default.old
+
+2 Creating and activating a new theme
+=====================================
+
+There are two basic ways of creating new themings:
+
+* Doing all new from scratch
+* Starting from an existing theme and doing everything step by step and more experimentally
+
+Depending on how you created your new theme it will be necessary to
+
+* put a new theme into the /themes -folder. The theme can be activated by putting "theme" => ‘themename’, into the config.php file.
+* make all changes in the /themes/default -file
+
+3 Structure
+===========
 
 The folder structure of a theme is exactly the same as the main ownCloud
 structure. You can override js files, images and templates with own versions.
 css files are loaded additionally to the default files so you can override css
 properties.
 
-Development
------------
 
-Themes should be developed in the `GitHub themes repository`_.
-You can find a simple example `here`_.
-
-How to change some css
-----------------------
-
-You can find the styles.css in core/
+4 How to change images and the logo
+===================================
+A new logo which you may want to insert can be added as follows:
 
 How to change images and the logo
 ---------------------------------
 
-The easiest picture to change in ownCloud is the logo. When you open your
-browser and point to ownCloud, you will see an ownCloud logo by default. That
-image can be replaced. We will show you how to do so in this section. There are
-two pictures to think about:
+4.1 Figure out the path of the old logo
+---------------------------------------
+Replace the old pictue, which postition you found out as described under 1.3. by adding an extension in case you want to re-use it later.
 
-owncloud-logo-medium-white.png
-  This is the splash screen logo, appearing
-  above the login page of your ownCloud instance. size: 252x122 (w x h) pixels,
-  approximately, works well. Too much bigger and the logo doesn’t fit in the
-  spot on the page
+4.2 Creating an own logo
+------------------------
 
-logo-wide.svg
-  This is the little logo that appears in the top left of the ownCloud navigate
-  frame (SVGs can be created with adobe illustrator or open source inkscape)
-  140x32 pixels. works well. Too much higher and the logo overflows into the
-  navigation pane and looks terrible.  The width, however, can be bigger or
-  smaller to meet your needs, whatever works for your logo.
+If you want to do a quick exchange like (1) it's important to know the size of the picture before you start creating an own logo:
 
-To change either of these logos, simply create your own logo file with these
-characteristics, and put it in you themes folder in ``core/img/``.
+* Go to the place in the filesystem, that has been shown by the webdeveloper tool/s
+* You can look up sizing in most cases via the file properties inside your file-manager
+* Create an own picture/logo with the same size then
 
-How to change colors
---------------------
+The (main) pictures, that can be found inside ownCloud standard theming are the following:
 
-Just put a new ``style.css`` into the ``core/css`` folder in your themes
-directory.  Changing the header bar colours on the Login and Main Navigation
-screen: In the style sheet, a bit further down, is a set that looks something
-like this:
+* The logo at the login-page above the credentials-box: 	        …/owncloud/themes/default/core/img/logo.svg
+* The logo, that's always in the left upper corner after login:   …/owncloud/themes/default/core/img/logo-wide.svg
 
-.. code-block:: css
+
+
+4.3 Inserting your new logo
+---------------------------
+Inserting a new logo into an existing theme is as simple as replacing the old logo with the new (genreated) one.
+You can use: scalable vector graphics (.svg) or common graphics formats for the internet such as portable network graphics (.png) or .jepg
+Just insert the new created picture by using the unchanged name of the old picture.
+
+
+
+4.4 changing the default colours
+--------------------------------
+
+With a web-developer tool like Mozilla-Inspector, you also get easyly displayed the color of the background you klicked on.
+On the top of the login page you can see a case- destinguished setting for different browsers:
+
+.. code-block::
 
   /* HEADERS */
-  #body-user #header, #body-settings #header { position:fixed; top:0; z-index:100; width:100%; height:2.5em; padding:.5em; background:#1d2d42; -moz-box-shadow:0 0 10px rgba(0, 0, 0, .5), inset 0 -2px 10px #222; -webkit-box-shadow:0 0 10px rgba(0, 0, 0, .5), inset 0 -2px 10px #222; box-shadow:0 0 10px rgba(0, 0, 0, .5), inset 0 -2px 10px #222; }
-  #body-login #header { margin: -2em auto 0; text-align:center; height:10em;
-   -moz-box-shadow:0 0 1em rgba(0, 0, 0, .5); -webkit-box-shadow:0 0 1em rgba(0, 0, 0, .5); box-shadow:0 0 1em rgba(0, 0, 0, .5);
+ ...
   background: #1d2d42; /* Old browsers */
   background: -moz-linear-gradient(top, #33537a 0%, #1d2d42  100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F1B3A4), color-stop(100%,#1d2d42)); /* Chrome,Safari4+ */
@@ -75,29 +117,37 @@ like this:
   background: -o-linear-gradient(top, #33537a 0%,#1d2d42 100%); /* Opera11.10+ */
   background: -ms-linear-gradient(top, #33537a 0%,#1d2d42 100%); /* IE10+ */
   background: linear-gradient(top, #33537a 0%,#1d2d42 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33537a', endColorstr='#1d2d42',GradientType=0 ); /* IE6-9 */ }
 
-  #owncloud { float:left; }
 
-This handles the headers for a lot of different browser types. What we want to
-do is change the ``#35537a`` (lighter blue) and ``#ld2d42`` (dark blue) color to
-the colours of our choice. In some older and other browsers, there is just one
-color, but in the rest there are gradients.The login page background is a
-horizontal gradient. The first hex number, ``#35537a``, is the top color of the
-gradient at the login screen. The second hex number, ``#ld2d42`` is the botton
-color of the gradient at the login screen.
+The different backround-assignements indicate the headers for a lot of different browser types. What you most likely want to do is change the #35537a (lighter blue) and #ld2d42 (dark blue) color to the colours of our choice. In some older and other browsers, there is just one color, but in the rest showing gradients is possible.
+The login page background is a horizontal gradient. The first hex number, #35537a, is the top color of the gradient at the login screen. The second hex number, #ld2d42 is the bottom color of the gradient at the login screen.
+The gradient in top of the normal view after login is also defined by these css-settings, so that they take effect in logged in situation as well.
+Change these colors to the hex color of your choice:
+As usual:
 
-Change these colors to the hex color of your choice, save, and refresh to see
-the new login screen. The other major color scheme is the blue header bar on the
-main navigation page once you log in to ownCloud. This color we will change with
-the above as well. Save the file and refresh the browser for the changes to take
-affect.
+* the first two figures give the intensity of the red channel,
+* the second two give the green intensity and the
+* tird pair gives the blue value.
+
+Save your css-file and refresh to see the new login screen. 
+The other major color scheme is the blue header bar on the main navigation page once you log in to ownCloud. 
+This color we will change with the above as well. 
+Save the file and refresh the browser for the changes to take effect.
+
+5 Testing the new theme out
+===========================
+
+There are different options for doing so:
+
+* If you're using a tool like the Inspector tools inside Mozilla, you can test out the CSS-Styles immediately inside the css-attributes, while looking at them.
+* If you have a developing/testing server as desciribed in 1. you can test out the effects in a real environment permanently.
+
 
 .. _GitHub themes repository: https://github.com/owncloud/themes
 .. _here: https://github.com/owncloud/themes/tree/master/example
 
-Notes for Updates
------------------
+6 Notes for Updates
+===================
 
 In case of theming it is recommended to the user,
 not to perform these adaptions inside the folder /themes/default.
