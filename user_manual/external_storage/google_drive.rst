@@ -18,7 +18,7 @@ Google Drive
 
    .. image:: ../images/external_google_drive_2_verify.png
 
-#. Create a project, e.g. "ownCloud-Project"
+#. Create a project, e.g. "cloud-Project"
 
    .. image:: ../images/external_google_drive_3_create_project.png
 
@@ -38,17 +38,17 @@ Google Drive
 
 #. Enter the following URLs to the "Authorized Redirect URIs" list and press the Update-button.
 
-::
+.. parsed-literal::
 
-  https://your-internet-domain/owncloud/index.php/settings/personal
-  https://your-internet-domain/owncloud/index.php/settings/admin
+  https://|cloudUrl|/index.php/settings/personal
+  https://|cloudUrl|/index.php/settings/admin
 
 
-.. note:: **Attention:** Make sure that the URLs contain a valid internet domain name and that this domain name is also used to access ownCloud, otherwise these URLs will not be accepted. This does not mean that ownCloud need to be accessible from the Internet, but that the domain name is send to Google to verify if the redirect URIs are valid.
+.. note:: **Attention:** Make sure that the URLs contain a valid internet domain name and that this domain name is also used to access |cloudName|, otherwise these URLs will not be accepted. This does not mean that |cloudName| need to be accessible from the Internet, but that the domain name is send to Google to verify if the redirect URIs are valid.
 
-12. Login into ownCloud using the previously entered Internet domain.
+12. Login into |cloudName| using the previously entered Internet domain.
 
-#. Click on the ``Add storage`` button in the ownCloud Admin or Personal settings dialog to add a Google Drive.
+#. Click on the ``Add storage`` button in the |cloudName| Admin or Personal settings dialog to add a Google Drive.
 
 #. Enter the folder name which should be used to access the share, e.g. "GDrive", enter the Google OAuth 2.0 **Client ID** and **Client secret**. Additional for the admin settings you have to choose the **user and/or group** who/which should be allowed to access the Google Drive (Applicable).
 

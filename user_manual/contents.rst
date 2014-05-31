@@ -1,7 +1,7 @@
 .. _contents:
 
 ===============================
-ownCloud documentation contents
+|cloudName| documentation contents
 ===============================
 
 .. toctree::
@@ -20,10 +20,3 @@ ownCloud documentation contents
     migration
     userpreferences
     external_storage/google_drive
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`

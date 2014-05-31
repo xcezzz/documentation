@@ -4,8 +4,7 @@ Version Control
 ownCloud supports simple version control for files. Versioning creates backups
 of files which are accessible via the Versions link. This link contains the
 history of the file where you can roll back a file to any previous version. Changes
-made at intervals greater than two minutes are saved in data/[user]/versions,
-and made accessible using the above pages.
+made at intervals greater than two minutes are made accessible using the above pages.
 
 To restore a specific version of a file, hover your cursor on a file and click
 *Versions* link. If any version is available, you should see a list like the image
@@ -21,16 +20,16 @@ the user doesn't run out of space. Following pattern is used to delete
 old versions:
 
 * For the first second we keep one version
-* For the first 10 seconds ownCloud keeps one version every 2 seconds
-* For the first minute ownCloud keeps one version every 10 seconds
-* For the first hour ownCloud keeps one version every minute
-* For the first 24 hours ownCloud keeps one version every hour
-* For the first 30 days ownCloud keeps one version every day
-* After the first 30 days ownCloud keeps one version every week
+* For the first 10 seconds |cloudName| keeps one version every 2 seconds
+* For the first minute |cloudName| keeps one version every 10 seconds
+* For the first hour |cloudName| keeps one version every minute
+* For the first 24 hours |cloudName| keeps one version every hour
+* For the first 30 days |cloudName| keeps one version every day
+* After the first 30 days |cloudName| keeps one version every week
 
 The versions are adjusted along this pattern every time a new version gets
 created.
 
 Beside that the version app takes care to never use more that 50% of the users
-currently available free space. If the stored versions exceed this limit ownCloud
+currently available free space. If the stored versions exceed this limit |cloudName|
 delete the oldest versions until it meets the memory usage limit again.

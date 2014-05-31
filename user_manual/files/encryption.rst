@@ -1,8 +1,8 @@
 Files Encryption
 ================
 
-ownCloud ships a encryption app, which enables encryption of all files stored in
-your ownCloud. Once the encryption app is enabled by the admin, all your files
+|cloudName| ships a encryption app, which enables encryption of all files stored in
+your |cloudName|. Once the encryption app is enabled by the admin, all your files
 will be encrypted automatically. Encryption and decryption always happens
 server-side. This enables the user to continue to use all the other apps to
 view and edit their data. But this also means that the server administrator could
@@ -19,13 +19,13 @@ feature as described below.
 What gets encrypted
 -------------------
 
-The current version encrypts all your files stored in ownCloud except the following:
+The current version encrypts all your files stored in |cloudName| except the following:
 
 - old files in the trash bin (files which were deleted before the encryption app was enabled)
 - image thumbnails from the gallery app and previews from the files app
 - search index from the full text search app
 
-All this data is stored directly on your ownCloud server, so you don't have to worry about exposing
+All this data is stored directly on your |cloudName| server, so you don't have to worry about exposing
 your data to a third party storage provider.
 
 Decrypt your data again
@@ -33,7 +33,7 @@ Decrypt your data again
 
 If the encryption app is disabled after users have already stored encrypted data, users
 will be promted to decrypt their files again in their personal settings. After this is
-done, they can continue to use their ownCloud without encryption.
+done, they can continue to use their |cloudName| without encryption.
 
 Settings
 --------
@@ -50,13 +50,3 @@ the admin will be able to read your data with a special password. This allows
 him to recover your files in the event you lose your password. If the recovery-key
 is not enabled than there is no way to restore your files if you lose your log-in
 password.
-
-Change Private Key Password
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This option will be only available if your log-in password but not your
-encryption password was changed by your admin. This can happen if your ownCloud
-provider uses a external user back-end, e.g. LDAP, and changed your log-in
-password there. In this case you can set your encryption password to your new
-log-in password by providing your old and new log-in password. The encryption
-app only works if log-in password and encryption password is identical.
