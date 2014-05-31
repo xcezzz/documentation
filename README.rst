@@ -14,7 +14,7 @@ These changes only reside within 'user_manual' since this should be the only one
 #. Many other small and miscellaneous changes to **dumb down** the user manual. 
   * An actual **end user** isn't going to be troubleshooting .htaccess files.
   * An end user won't be fixing **big file** issues.
-  * Actually why would a real end user wont ever have access to the server itself?
+  * Actually why would a real end user ever have access to the server itself?
 
 How To Define Branding
 --------
