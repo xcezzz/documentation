@@ -666,7 +666,7 @@ in the config.php file.
 In the event that a load balancer is in place, as long as it sends the correct X-Forwarded-Host header, there will
 be no issues.
 
-It should be noted that the loopback address, 127.0.0.1, is white labeled and therefore users on the ownCloud
+It should be noted that the loopback address, 127.0.0.1, is white listed and therefore users on the ownCloud
 server who access ownCloud with the loopback will successfully login.
 In the event that an improper URL is used, the following error will appear:
 
