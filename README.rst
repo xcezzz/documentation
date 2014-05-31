@@ -1,15 +1,20 @@
 Brandable / Generified User Documentation
 ======================
-Added a few reStructuredText substitution directives. Updated images to not be so 'ownCloudy'.
-These changes only reside within 'user_manual', since this should be the only one seen by end-users.
+Added a few reStructuredText substitution directives. Updated images to not be so 'ownCloudy'. User Manual has had many 
+things stripped out that honestly should be in the admin manual since an end user would really never have access to the server.
+These changes only reside within 'user_manual' since this should be the only one seen by end-users.
 
 #. All **ownCloud** references updated to be |cloudName| 
 #. All literal example blocks referencing **example.org/owncloud** or **localhost/owncloud** updated to be parsed literal blocks and now reflect a defined |cloudUrl| ::
   davs://mydefined.domain.com/remote.php/webdav
-#. All images updated to remove logos and direct references to 'owncloud' or '/owncloud'
+#. All images updated to remove logos and direct references to **owncloud** or **/owncloud**
 #. conf.py rst_epilog updated to inject the substituions from branding.py into every .rst.
-#. Makefile updated to not force owncloud_org html_template. Now uses the conf.py html_theme var.
-#. Theme named 'generalized' copied from owncloud_org, removed ownCloud.org header navigation bar in layout.html.
+#. Makefile updated to not force ``owncloud_org`` ``html_theme`` for ``make html``. Now properly uses the **conf.py** ``html_theme`` var.
+#. Theme named **generalized** copied from **owncloud_org**, removed ownCloud.org blue header navigation bar in layout.html.
+#. Many other small and miscellaneous changes to **dumb down** the user manual. 
+  * An actual **end user** isn't going to be troubleshooting .htaccess files.
+  * An end user won't be fixing **big file** issues.
+  * Actually why would a real end user wont ever have access to the server itself?
 
 How To Define Branding
 --------
@@ -17,6 +22,13 @@ branding.py can be updated directly or you can set environment variables CLOUD_N
 
   cloudName = os.getenv('CLOUD_NAME', u'myCloud')
   cloudUrl = os.getenv('CLOUD_URL', u'cloud.domain.com')
+
+Continue building documentation as usual but for easy copypasta::
+
+  #!/bin/bash
+  export CLOUD_NAME="mySuperAwesomeCloud"
+  export CLOUD_URL="my.super.awesome.cloud.com"
+  make clean && make html && make latexpdf
 
 ownCloud Documentation
 ======================
