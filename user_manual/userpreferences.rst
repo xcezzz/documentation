@@ -4,7 +4,7 @@ Changing Preferences
 .. figure:: images/oc_user_preferences.png
 
 As a user, you can change your personal settings by clicking on your username
-on the top-right of ownCloud instance and choosing *Personal*.
+on the top-right of |cloudName| instance and choosing *Personal*.
 
 If you are an administrator, you can also manage users and administer the server
 by using the related links. Those links will not be shown to a normal user.
@@ -19,11 +19,11 @@ applications, you may have more options listed.
   with the one that you currently using.
 
 * By default, your image will have the initial of your username. This image is currently used in editing documents.
-  You can either upload a new image or choose one from the existing images on your ownCloud to set.
+  You can either upload a new image or choose one from the existing images on your |cloudName| to set.
 
 * In this page, you can also change your web interface language if you want to override the browser settings.
 
-* WebDAV link will allow you to only view and download your ownCloud files using a browser. You will still need
+* WebDAV link will allow you to only view and download your |cloudName| files using a browser. You will still need
   your username and password to access this page.
 
 * Documents app will have an option to specify the folder for newly created documents. You can set the folder here.

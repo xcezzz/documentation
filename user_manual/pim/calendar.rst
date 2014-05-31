@@ -16,30 +16,40 @@ link for CalDAV access.
 Synchronising Calendars with CalDAV
 -----------------------------------
 
-Assuming you access your web interface via an address like this::
+Assuming you access your web interface via an address like this:
 
-  http://ADDRESS
+.. parsed-literal::
+
+  http://|cloudUrl|
 
 Then you can access your calendars with CalDAV-compatible programs like
-Kontact, Evolution, Thunderbird using the following URL::
+Kontact, Evolution, Thunderbird using the following URL:
 
-  http://ADDRESS/remote.php/caldav
+.. parsed-literal::
 
-To use the ownCloud calendar with Apple iCal you will need to use the following
-URL, including the trailing slash::
+  http://|cloudUrl|/remote.php/caldav
 
-  http://ADDRESS/remote.php/caldav/principals/username/
+To use the |cloudName| calendar with Apple iCal you will need to use the following
+URL, including the trailing slash:
 
-Mozilla Lightning users need to this URL scheme::
+.. parsed-literal::
 
-  https://ADDRESS/remote.php/caldav/calendars/USERNAME/CALENDARNAME
+  http://|cloudUrl|/remote.php/caldav/principals/username/
 
-   Example for a simple calendar: The "Default calendar" is referred to as "defaultcalendar", 
-   and the users' name here is "test".
-   The full URL (which on the picture can't be seen because of the
-   short edit field) is then::
+Mozilla Lightning users need to this URL scheme:
 
-       https://localhost/owncloud/remote.php/caldav/calendars/test/defaultcalendar
+.. parsed-literal::
+
+  https://|cloudUrl|/remote.php/caldav/calendars/USERNAME/CALENDARNAME
+
+Example for a simple calendar: The "Default calendar" is referred to as "defaultcalendar", 
+and the users' name here is "test".
+The full URL (which on the picture can't be seen because of the
+short edit field) is then:
+
+.. parsed-literal::
+
+       https://|cloudUrl|/remote.php/caldav/calendars/test/defaultcalendar
 
 .. Note: the calendar names are lowercased and the spaces removed. They are not to be URL-encoded anymore.
 
@@ -95,5 +105,5 @@ Timezone set notification
 
 The calendar needs your current position in order to detect your timezone.
 Without the correct timezone there will be a time offset between the events in
-ownCloud and your desktop calendar you synchronise with ownCloud. You can also
+|cloudName| and your desktop calendar you synchronise with |cloudName|. You can also
 set the timezone manually in the personal settings.

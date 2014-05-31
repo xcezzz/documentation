@@ -1,7 +1,7 @@
 Using the Contacts App
 ======================
 
-The contacts app of ownCloud is like any other mobile contact app but with more functionality.
+The contacts app of |cloudName| is like any other mobile contact app but with more functionality.
 Just as you open your account you will get the a default addressbook available.
 We will see later that Of course you can always add and remove addressbooks in here.
 
@@ -39,7 +39,7 @@ After the upload it should look something like this in which all the names and c
 .. image:: ../images/contact_vcfpick.jpg
 Picking VCF files
 
-After upload, the interface will automatically place your contacts into ownCloud.
+After upload, the interface will automatically place your contacts into |cloudName|.
 
 
 Create contacts manually
@@ -64,11 +64,10 @@ Adding picture to the contact
 
 There are two methods in which you can give a picture id to the specific contact
 
-.. image:: ../images/contact_picture.jpg
 Contact picture options
 
-1) **Direct upload**
-2) **Select pics already uploaded in ownCloud files.**
+1) Direct upload
+2) Select pics already uploaded in |cloudName| files.
 
 After you have selected the picture for the contact you get
 an option to crop the picture to suit your requirements
@@ -107,7 +106,7 @@ Syncing with Android
 ~~~~~~~~~~~~~~~~~~~~
 
 1) Install CardDAV- Sync free from Google play store by visiting `this link <https://play.google.com/store/apps/details?id=org.dmfs.carddav.sync>`_.
-2) This app supports auto- configuration which is a Boon- after installing visit this link - carddavs://example.org/remote.php/carddav/ to auto-configure the app.
+2) This app supports auto- configuration which is a Boon- after installing visit this link - carddavs://|cloudUrl|/remote.php/carddav/ to auto-configure the app.
 3) Enter your login details
 4) After the app has checked your login details you may just select- Sync server to phone option
 5) That's it there is nothing else to do for Android :)
@@ -124,7 +123,7 @@ Synchronizing the Address book
 3. Select Add Account.
 4. Select other as account type.
 5. Select Add CardDAV account.
-6. For server, type http://example.org/remote.php/carddav/principals/username
+6. For server, type http://|cloudUrl|/remote.php/carddav/principals/username
 7. Enter your user name and password.
 8. Select Next.
 9. If your server does not support SSL, a warning will be displayed. Select Continue.
@@ -137,13 +136,6 @@ Synchronizing the Address book
 * Go back to account information and hit Save.
 
 Now should now find your contacts in the address book of your iPhone.
-
-
-Other Syncing options provided by ownCloud
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. For Android you may use official Android app which can be found `here <https://owncloud.org/install/>`_.
-2. And for iOS (iPhone and iPad) use their app which can be found `here <https://owncloud.org/install/>`_.
 
 It doesn't work!!!
 ------------------

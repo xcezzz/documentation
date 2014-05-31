@@ -1,7 +1,7 @@
 Storage Quota
 =============
 
-ownCloud makes it possible to specify a storage quota for users which is the **maximum space** a user is allowed to use for files located in their individual home storage.
+|cloudName| makes it possible to specify a storage quota for users which is the **maximum space** a user is allowed to use for files located in their individual home storage.
 
 .. note:: When setting a quota, administrators need to be aware that it **only applies to actual files**, not application metadata. This means that when allocating a quota, they need to make sure there at least 10% more space available for a given user.
 

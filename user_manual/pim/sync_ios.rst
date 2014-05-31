@@ -9,7 +9,11 @@ Calendar
 #. Select Add Account.
 #. Select Other as account type.
 #. Select Add CalDAV account.
-#. For server, type ``ADDRESS/remote.php/caldav/principals/username``
+#. For server, type:
+
+.. parsed-literal::
+   |cloudUrl|/remote.php/caldav/principals/username
+
 #. Enter your user name and password.
 #. Select Next.
 #. If your server does not support SSL, a warning will be displayed.
@@ -34,7 +38,12 @@ Address book
 #. Select Add Account.
 #. Select Other as account type.
 #. Select Add CardDAV account.
-#. For server, type ``ADDRESS/remote.php/carddav/principals/username``
+#. For server, type:
+
+.. parsed-literal::
+   |cloudUrl|/remote.php/carddav/principals/username
+
+
 #. Enter your user name and password.
 #. Select Next.
 #. If your server does not support SSL, a warning will be displayed.

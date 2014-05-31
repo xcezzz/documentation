@@ -5,15 +5,15 @@ User account migration support is provided by the user_migrate app. It is import
 
 Export
 ------
-To export your user account, simply visit Settings > Personal and click on the 'Export' button. A compressed zip file will be generated on the fly and downloaded to your computer. This file includes all of your files and application data that was stored on your ownCloud account. You may use this as a method of backing up your personal account.
+To export your user account, simply visit Settings > Personal and click on the 'Export' button. A compressed zip file will be generated on the fly and downloaded to your computer. This file includes all of your files and application data that was stored on your |cloudName| account. You may use this as a method of backing up your personal account.
 
 Import
 ------
-To import your user account, you must first have an existing account on your new ownCloud install. Then follow this procedure:
+To import your user account, you must first have an existing account on your new |cloudName| install. Then follow this procedure:
 
-#. Login to your new account on the new ownCloud instance
+#. Login to your new account on the new |cloudName| instance
 #. Navigate to the Settings > Personal page
-#. Select the 'Import' button, and locate the zip file that you downloaded from your old ownCloud instance
+#. Select the 'Import' button, and locate the zip file that you downloaded from your old |cloudName| instance
 #. Wait for the file to be uploaded and imported
 
 .. note:: Your user account credentials will **not** be migrated.

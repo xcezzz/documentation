@@ -1,22 +1,22 @@
 Accessing your Files (Web Interface)
 ====================================
 
-Your ownCloud files can be accessed from anywhere by using your ownCloud's web interface. In the files app,
+Your |cloudName| files can be accessed from anywhere by using your |cloudName|'s web interface. In the files app,
 you can view (if a common type), move, rename, download, share and delete your files easily. If versioning app is
 enabled, you can also revert a file to specific version. See :doc:`versioncontrol` for details.
 
 .. figure:: ../images/oc_filesweb.png
-Files app on ownCloud web interface
+Files app on |cloudName| web interface
 
-With ownCloud 6, you can now see file thumbnails next to the filenames. By hovering your cursor on a file, you
+With |cloudName| 6, you can see file thumbnails next to the filenames. By hovering your cursor on a file, you
 will be provided with some file operations. You can use rename, download, share buttons to perform those actions
 or click on the cross icon at the rightmost location to remove the hovered file. If the file is an editable
 office file, it will also show *Edit* button to open the file in documents app (if this app is enabled).
 
-Navigating inside your ownCloud
+Navigating inside your |cloudName|
 -------------------------------
 
-To navigate through folders in your ownCloud, you can simply click on a folder name. The navigation bar
+To navigate through folders in your |cloudName|, you can simply click on a folder name. The navigation bar
 will show your current directory:
 
 .. figure:: ../images/oc_filesweb_navigate.png
@@ -35,7 +35,7 @@ options to choose from:
 .. figure:: ../images/oc_filesweb_new.png
 New button options
 
-* *Text file* will create a simple text file and add into the current folder in your ownCloud.
+* *Text file* will create a simple text file and add into the current folder in your |cloudName|.
 * *Folder* will create a folder in current folder.
 * *From link* will download the file from the provided link and place it into the current folder.
 
@@ -52,18 +52,18 @@ If download button is not visible, this means that administrator had disabled th
 Viewing files
 -------------
 
-ownCloud can display uncompressed text files, OpenDocument files, PDFs, and image files by simply clicking on
+|cloudName| can display uncompressed text files, OpenDocument files, PDFs, and image files by simply clicking on
 the file name. If displaying of a file is not possible, a download process will start.
 
 Moving files
 ------------
 
-In ownCloud web interface, file(s) can be moved by dragging and dropping them into a sub-directory. If you would like to move a directory to an upper directory, drag the file(s) into one of the folders shown in navigation bar (depicted above).
+In |cloudName| web interface, file(s) can be moved by dragging and dropping them into a sub-directory. If you would like to move a directory to an upper directory, drag the file(s) into one of the folders shown in navigation bar (depicted above).
 
 Sharing files
 -------------
 
-Any file/folder on ownCloud can be shared to download with a local user, group or any person online with a public link. Shared files/folders will show a *Shared* text next to their names.
+Any file/folder on |cloudName| can be shared to download with a local user, group or any person online with a public link. Shared files/folders will show a *Shared* text next to their names.
 
 To share a file/folder, hover your cursor on an item in the files app and click *Share*. You will be provided with some options:
 
