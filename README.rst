@@ -1,3 +1,23 @@
+Brandable / Generified User Documentation
+======================
+Added a few reStructuredText substitution directives. Updated images to not be so 'ownCloudy'.
+These changes only reside within 'user_manual', since this should be the only one seen by end-users.
+
+#. All **ownCloud** references updated to be |cloudName| 
+#. All literal example blocks referencing **example.org/owncloud** or **localhost/owncloud** updated to be parsed literal blocks and now reflect a defined |cloudUrl| ::
+  davs://mydefined.domain.com/remote.php/webdav
+#. All images updated to remove logos and direct references to 'owncloud' or '/owncloud'
+#. conf.py rst_epilog updated to inject the substituions from branding.py into every .rst.
+#. Makefile updated to not force owncloud_org html_template. Now uses the conf.py html_theme var.
+#. Theme named 'generalized' copied from owncloud_org, removed ownCloud.org header navigation bar in layout.html.
+
+How To Define Branding
+--------
+branding.py can be updated directly or you can set environment variables CLOUD_NAME and CLOUD_URL for scriptiness::
+
+  cloudName = os.getenv('CLOUD_NAME', u'myCloud')
+  cloudUrl = os.getenv('CLOUD_URL', u'cloud.domain.com')
+
 ownCloud Documentation
 ======================
 
